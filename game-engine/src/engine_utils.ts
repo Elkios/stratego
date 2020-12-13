@@ -56,10 +56,10 @@ export function verifyBoardIntegrity(state: Case[][]): Result<Case[][], Stratego
         return new Err(new InitGameError("Players must place theirs pieces in the right place !"));
     }
 
-    if (!checkPlayerHasCorrectPieces(state.slice(0, 4)) &&
-        !checkPlayerHasCorrectPieces(state.slice(5, 9))) {
-        return new Err(new InitGameError("You need to start with the right pieces"));
-    }
+    // if (!checkPlayerHasCorrectPieces(state.slice(0, 4)) &&
+    //     !checkPlayerHasCorrectPieces(state.slice(5, 9))) {
+    //     return new Err(new InitGameError("You need to start with the right pieces"));
+    // }
 
     return new Ok(state);
 }
